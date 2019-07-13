@@ -56,15 +56,4 @@
 		<copy file="${war.home}/${app.name}.war" todir="${dist.home}" overwrite="true" />
 	</target>
 
-	<target name="ear" >
-		<ear destfile="${dist.home}/${ear.name}" appxml="${app.home}/application.xml" update="true">
-			<fileset dir="${war.home}" includes="*.jar,*.war"/>
-			<metainf dir="${app.home}" excludes="application.xml"/>
-		</ear>
-		
-		<delete file="${dist.home}/${app.name}.war" /> 
-		<delete dir="${war.home}" />
-		<delete dir="${work.home}" />
-	</target>
-	
 </project>
