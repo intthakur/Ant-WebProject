@@ -14,7 +14,7 @@ pipeline
       stage('ant build')
       {
            steps{
-           withAnt(installation: 'ANT_HOME', jdk: 'localjdk-1.8') {
+           withAnt(installation: 'ANT_HOME', jdk: 'localjdk-8') {
                  sh 'ant -f build.xml -v'
 }
 }
