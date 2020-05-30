@@ -8,7 +8,7 @@ pipeline
                   
                   steps 
                    {
-                     withAnt (installation: 'ant') 
+                     withAnt (installation: 'ANT_HOME', jdk: 'localjdk-8') 
                       {
                         sh 'ant info'
                       }
@@ -19,7 +19,7 @@ pipeline
                   {
                     steps
                       {
-                         withAnt (installation: 'ant')
+                         withAnt (installation: 'ANT_HOME', jdk: 'localjdk-8')
                           {
                             sh 'ant package'
                           }
@@ -29,7 +29,7 @@ pipeline
                   {
                     steps
                       {
-                         withAnt (installation: 'ant')
+                         withAnt (installation: 'ANT_HOME', jdk: 'localjdk-8')
                           {
                             sh 'ant war'
                           }
